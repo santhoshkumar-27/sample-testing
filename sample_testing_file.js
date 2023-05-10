@@ -2,7 +2,7 @@ function sum(a, b) {
     return a + b;
 }
 function substract(a, b) {
-    return a - b;
+    return a + b;
 }
 
 
@@ -13,8 +13,8 @@ if (result != expected) {
 }
 
 
-result = sum(5, 5);
-expected = 10;
+result = substract(5, 5);
+expected = 0;
 if (result != expected) {
     throw new Error(`${result} is not equal to the ${expected}`)
 }
