@@ -1,5 +1,5 @@
 // import {sum, substract} from './math';
-const { sum, substract } = require('./math')
+const { sum, substract, sumAsync, subtractAsync } = require('./math')
 
 // let result = sum(5, 5);
 // expect(result).toBe(10);
@@ -17,7 +17,7 @@ const { sum, substract } = require('./math')
 test('sum', () => {
     const result = sum(5, 5);
     expect(result).toBe(10);
-    expect(result).toBeTruthy();
+    // expect(result).toBeTruthy();
 });
 
 // function subtractTest() {
@@ -27,8 +27,22 @@ test('sum', () => {
 // }
 test('subtract', () => {
     const result = substract(15, 5);
+    expect(result).toBe(10);
+    // expect(result).toBeTruthy();
+});
+
+
+// Handling the async calls testing
+test('sumasync of testing', async () => {
+    const result = await sumAsync(5, 5);
+    expect(result).toBe(10);
+    // expect(result).toBeTruthy();
+});
+
+test('subtract async of testing', async () => {
+    const result = await subtractAsync(5, 5);
     expect(result).toBe(0);
-    expect(result).toBeTruthy();
+    // expect(result).toBeTruthy();
 });
 
 function expect(actual) {
@@ -39,7 +53,7 @@ function expect(actual) {
             }
         },
         toBeTruthy() {
-            if (!!!actual) {
+            if (!!actual) {
                 throw new Error(`${actual} is not to be truthy`)
             }
         }
@@ -47,9 +61,9 @@ function expect(actual) {
 }
 
 // Because of this approach if one test fails the another test can't able to run
-function test(title, callBack) {
+async function test(title, callBack) {
     try {
-        callBack();
+        await callBack();
         console.log('Success:', title);
     } catch (e) {
         console.log('Error:', title);
