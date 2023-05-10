@@ -8,20 +8,28 @@ const { sum, substract } = require('./math')
 //     throw new Error(`${result} is not equal to the ${expected}`)
 // }
 
-function sumTest() {
-    let result = sum(5, 5);
+// function sumTest() {
+//     const result = sum(5, 5);
+//     expect(result).toBe(10);
+//     expect(result).toBeTruthy();
+// }
+
+test('sum', () => {
+    const result = sum(5, 5);
     expect(result).toBe(10);
     expect(result).toBeTruthy();
-}
+});
 
-test('sum', sumTest);
-
-function subtractTest() {
-    result = substract(15, 5);
+// function subtractTest() {
+//     const result = substract(15, 5);
+//     expect(result).toBe(0);
+//     expect(result).toBeTruthy();
+// }
+test('subtract', () => {
+    const result = substract(15, 5);
     expect(result).toBe(0);
     expect(result).toBeTruthy();
-}
-test('subtract', subtractTest);
+});
 
 function expect(actual) {
     return {
@@ -42,8 +50,9 @@ function expect(actual) {
 function test(title, callBack) {
     try {
         callBack();
+        console.log('Success:', title);
     } catch (e) {
-        console.log(e);
+        console.log('Error:', title);
+        console.error(e)
     }
-    console.log(title)
 }
