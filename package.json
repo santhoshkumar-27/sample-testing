@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "math.js",
-  "scripts": { "test": "jasmine-browser-runner runSpecs" },
+  "scripts": {
+    "test": "jasmine-browser-runner runSpecs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/santhoshkumar-27/sample-testing.git"
@@ -17,5 +19,8 @@
   "devDependencies": {
     "jasmine-browser-runner": "^1.4.0",
     "jasmine-core": "^4.6.0"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.9.2"
   }
 }
