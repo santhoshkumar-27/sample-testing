@@ -1,4 +1,4 @@
-export class Calculator {
+ class Calculator {
     constructor() {
     }
     add(a, b) {
@@ -15,3 +15,6 @@ export class Calculator {
     }
 }
 
+export default {
+    Calculator
+}
