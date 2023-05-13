@@ -1,0 +1,21 @@
+{
+  "name": "sample-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "math.js",
+  "scripts": { "test": "jasmine-browser-runner runSpecs" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santhoshkumar-27/sample-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santhoshkumar-27/sample-testing/issues"
+  },
+  "homepage": "https://github.com/santhoshkumar-27/sample-testing#readme",
+  "devDependencies": {
+    "jasmine-browser-runner": "^1.4.0",
+    "jasmine-core": "^4.6.0"
+  }
+}
